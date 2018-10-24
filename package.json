@@ -1,0 +1,24 @@
+{
+  "name": "ridiculize",
+  "version": "0.0.1",
+  "description": "Ridiculize a string (works better if you speak spanish)",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiouve/ridiculize.git"
+  },
+  "keywords": [
+    "ridiculize",
+    "node",
+    "spiderman"
+  ],
+  "author": "Sergio Uve",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergiouve/ridiculize/issues"
+  },
+  "homepage": "https://github.com/sergiouve/ridiculize#readme"
+}
