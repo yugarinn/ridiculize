@@ -13,3 +13,7 @@ ridiculize('He estado esperando mucho tiempo ya')
 ```bash
 yarn test
 ```
+
+## TODO
+- [ ] - Refactor to generators
+- [ ] - Logic for special chars
