@@ -15,5 +15,5 @@ yarn test
 ```
 
 ## TODO
-- [ ] - Refactor to generators
-- [ ] - Logic for special chars
+- [ ] Refactor to generators
+- [ ] Logic for special chars
