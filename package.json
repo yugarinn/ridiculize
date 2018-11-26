@@ -1,6 +1,6 @@
 {
   "name": "ridiculize",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Ridiculize a string (works better if you speak spanish)",
   "main": "ridiculize.js",
   "scripts": {

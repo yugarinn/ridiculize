@@ -15,3 +15,11 @@ test('recognizes uppercase vocals', () => {
     expect(isVowel('O')).toBe(true);
     expect(isVowel('U')).toBe(true);
 })
+
+test('recognizes basic accents', () => {
+    expect(isVowel('á')).toBe(true);
+    expect(isVowel('é')).toBe(true);
+    expect(isVowel('í')).toBe(true);
+    expect(isVowel('ó')).toBe(true);
+    expect(isVowel('ú')).toBe(true);
+})
