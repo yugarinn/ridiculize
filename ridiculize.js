@@ -2,29 +2,29 @@ const swapCharacters = require('./lib/swapCharacters')
 const isVowel        = require('./lib/isVowel')
 
 const ridiculize = phrase => {
-    let splitted = phrase.split('')
+    return phrase.split('').map((character, index, phrase) => {
+        // TODO: get rid of this
+        const nextCharacter = phrase[index + 1]
+        const previousCharacter = phrase[index - 1]
 
-    for (let position = 0; position < splitted.length; position++) {
-        const character = splitted[position]
-        const nextCharacter = splitted[position + 1]
+        if (character === 'u' && previousCharacter === 'q') {
+            return
+        }
+
+        if (isVowel(character)) {
+            return swapCharacters(character, 'i')
+        }
 
         if (character === 'q' && nextCharacter === 'u') {
-            position++
-            continue
+            return swapCharacters(character, 'qu')
         }
 
-        if (isVowel(character)) splitted[position] = swapCharacters(character, 'i')
-
-        if (character === 'c' && nextCharacter !== 'i' && isVowel(nextCharacter)) {
-            splitted[position] = swapCharacters(character, 'q')
-            position++
-            splitted.splice(position, 0, 'u')
+        if (character === 'c' && ! ['i', 'e'].includes(nextCharacter) && isVowel(nextCharacter)) {
+            return swapCharacters(character, 'qu')
         }
-    }
 
-    const ridiculized = splitted.join('')
-
-    return ridiculized
+        return character
+    }).join('')
 }
 
 module.exports = ridiculize
